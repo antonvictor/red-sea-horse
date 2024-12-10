@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover the beauty of the underwater world with Red Sea Horse Diving Center. We offer unforgettable diving adventures, expert instructors, and breathtaking Red Sea marine life experiences."
+    />
+    <title>RedSea Horse Diving Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link 
+      rel="preload" 
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" 
+      as="style" 
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="preload" href="./imgs/Logo.webp" as="image">
+    <noscript>
+      <link 
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" 
+        rel="stylesheet" 
+      />
+    </noscript>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="absolute left-0 top-14 z-10 h-1/6 w-full p-0 lg:top-24">
+      <nav
+        aria-label="Main Navigation"
+        class="flex h-1/6 items-center justify-center gap-4 xl:gap-11"
+      >
+        <ul
+          class="hidden w-full flex-1 items-center justify-end gap-4 py-2 text-white lg:flex xl:gap-11"
+        >
+          <li>
+            <a href="#" aria-label="About Us" class="nav-link">Über uns</a>
+          </li>
+          <li><a href="#" aria-label="Egypt" class="nav-link">Ägypten</a></li>
+          <li>
+            <a href="#" aria-label="Our Offers" class="nav-link"
+              >Unser Angebot</a
+            >
+          </li>
+        </ul>
+        <a href="#" aria-label="Red Sea Horse Diving Center Home">
+
+          
+          <picture>
+            <source srcset="./imgs/Logo.webp" type="image/webp">
+            <source srcset="./imgs/Logo.svg" type="image/svg+xml">
+            <img src="./imgs/Logo.svg" alt="Red Sea Horse Diving Center Logo" class="size-20 max-w-full lg:size-40">
+          </picture>
+    
+        </a>
+        <ul
+          class="hidden w-full flex-1 items-center justify-start gap-4 py-2 text-white lg:flex xl:gap-16"
+        >
+          <li>
+            <a href="#" aria-label="Our Boat" class="nav-link">Unser Boot</a>
+          </li>
+          <li><a href="#" aria-label="Booking" class="nav-link">Buchung</a></li>
+          <li><a href="#" aria-label="Contact" class="nav-link">Kontakt</a></li>
+          <li><a href="#" aria-label="Language" class="nav-link">DE</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Navigation and buttons -->
+      <button
+        onclick="toggleMenu()"
+        aria-label="Toggle Mobile Menu"
+        class="fixed right-10 top-12 z-50 lg:hidden"
+        id="mobile-menu-toggle"
+      >
+        <img
+          src="./imgs/menu.svg"
+          alt="Navigation Menu"
+          class="right-1/4 h-8 w-8"
+        />
+      </button>
+      <ul
+        aria-label="Mobile Navigation Menu"
+        data-menu-state="closed"
+        id="mobile-menu"
+        class="fixed z-40 flex h-screen w-full flex-col items-center justify-around space-y-4 bg-blue-900 py-4 text-center text-white transition-all duration-300 ease-in sm:w-3/4 lg:hidden"
+      >
+        <li class="nav-link w-1/3">
+          <a href="#" aria-label="About Us">Über uns</a>
+        </li>
+        <li class="nav-link w-1/3">
+          <a href="#" aria-label="Egypt">Ägypten</a>
+        </li>
+        <li class="nav-link w-1/3">
+          <a href="#" aria-label="Our Offers">Unser Angebot</a>
+        </li>
+        <li class="nav-link w-1/3">
+          <a href="#" aria-label="Our Boat">Unser Boot</a>
+        </li>
+        <li class="nav-link w-1/3">
+          <a href="#" aria-label="Booking">Buchung</a>
+        </li>
+        <li class="nav-link w-1/3">
+          <a href="#" aria-label="Contact">Kontakt</a>
+        </li>
+        <li class="nav-link w-1/3"><a href="#" aria-label="Language">DE</a></li>
+      </ul>
+    </header>
+    <main class="relative z-0 w-full overflow-hidden">
+      <!-- Hero Section -->
+      <section
+        aria-label="Hero Section"
+        class="m-0 flex h-screen w-auto flex-col items-center justify-center gap-8 p-0"
+      >
+        <img
+          class="pointer-events-none absolute left-0 top-0 -z-10 aspect-auto h-screen select-none overflow-x-hidden shadow-md shadow-gray-400 xl:-left-[10rem] xl:-top-[10rem] xl:box-content 2xl:max-h-fit lg:w-screen xl:rounded-b-[700px] xl:border-[10rem] xl:border-cyan-50"
+          src="./imgs/Hero_mob_320x642.webp"
+          alt="background video"
+          srcset="
+            ./imgs/Hero_mob_320x642.webp   320w,
+            ./imgs/Hero_mob_480x642.webp   480w,
+            ./imgs/Hero_mob_600x642.webp   600w,
+            ./imgs/Hero_mob_1024x642.webp 1024w,
+            ./imgs/Hero.webp              2000w
+          "
+          sizes="(max-width: 320px) 320px,(max-width: 480px) 480px, (max-width: 600px) 600px, (max-width: 1024px) 1024px, 2000px"
+        />
+        <h1
+          class="w-auto text-center font-urbanist text-2xl font-extralight text-white sm:text-[2.50rem] "
+          style="font-display: swap;"
+        >
+          Wähle Dein Abenteuer
+        </h1>
+        <button
+          aria-label="Start Adventure"
+          class="z-20 h-7 w-32 rounded-l-full rounded-r-full border-2 border-white text-center text-sm font-normal text-white hover:bg-white hover:text-blue-900 sm:h-10 sm:w-44 sm:text-base"
+        >
+          STARTE JETZT
+        </button>
+      </section>
+
+      <!-- About the Red Sea Section -->
+      <section
+        aria-label="About the Red Sea"
+        class="relative mb-20 flex h-auto w-full justify-center gap-4 pb-10 pt-20 md:h-screen lg:gap-16 xl:mb-0"
+      >
+        <figure class="relative z-10 hidden size-4/6 w-auto lg:inline">
+          <img
+            src="./imgs/sunset_background_icon.svg"
+            loading="lazy"
+            alt="sunset icon"
+            class="absolute left-[15%] top-0 size-32 -translate-y-2/4"
+          />
+          <img
+            src="./imgs/Ellipse 2.webp"
+            loading="lazy"
+            alt="Sea View Image"
+            class="size-full rounded-full border-[1px] border-black"
+          />
+          <img
+            src="./imgs/Ellipse 3.webp"
+            loading="lazy"
+            alt="Deep Sea View"
+            class="absolute -bottom-1/3 right-4 size-3/6"
+          />
+          <div
+            class="absolute -bottom-[40%] right-[40%] -z-10 size-[30%] rounded-full bg-[#174790]"
+          ></div>
+        </figure>
+        <article
+          class="z-10 flex h-full w-8/12 flex-col gap-2 lg:w-5/12 lg:gap-8"
+        >
+          <h2
+            class="font-urbanist text-base font-semibold text-blue-900 sm:text-xl 2xl:text-2xl"
+          >
+            Das Paradies für Taucher: <br />
+            Willkommen im <span class="text-red-700">Roten Meer</span>
+          </h2>
+          <p class="text-sm font-light sm:text-base 2xl:text-base">
+            Tauche ein in eine Welt voller faszinierender Unterwasserabenteuer,
+            während wir dich herzlich dazu einladen, die unvergleichliche
+            Schönheit und Vielfalt des Roten Meeres zu entdecken. RedSeaHorse
+            bietet die Möglichkeit, die atemberaubenden Korallenriffe,
+            faszinierenden Meereslebewesen und geheimnisvollen Wracks dieser
+            einzigartigen Region zu erkunden.
+          </p>
+          <p class="text-sm font-light sm:text-sm 2xl:text-base">
+            Unsere erfahrenen Tauchlehrer stehen dir zur Seite, um dir ein
+            sicheres und unvergessliches Taucherlebnis zu garantieren, egal ob
+            du ein erfahrener Taucher bist oder zum ersten Mal die
+            Unterwasserwelt entdecken möchtest. Wir bieten eine Vielzahl von
+            Kursen und Ausflügen für alle Erfahrungsstufen an, so dass jeder die
+            Möglichkeit hat, das Abenteuer seines Lebens zu erleben.
+          </p>
+          <p class="text-sm font-light sm:text-sm 2xl:text-base">
+            Entdecke mit uns die lebendigen Farben der Korallenriffe, die
+            faszinierende Vielfalt der Meeresbewohner und die ruhige
+            Schwerelosigkeit des Tauchens. Tauche ein und lasse dich von der
+            Magie des Roten Meeres verzaubern.  Ägypten ist eine der besten
+            Destinationen für SCUBA-Tauchgänge. Mit seinen warmen Gewässern, der
+            klaren Sicht und dem reichhaltigen Meeresleben zieht es jedes Jahr
+            Tausende von Tauchern in diese Region.
+          </p>
+        </article>
+      </section>
+
+      <!-- Boat Adventure Section -->
+      <section
+        aria-label="Boat Adventure"
+        class="relative flex h-auto min-h-[80vh] w-full items-center justify-center overflow-hidden sm:h-[80vh] xl:justify-between"
+      >
+        <div
+          class="pointer-events-none absolute left-0 top-0 -z-10 h-full w-full select-none overflow-hidden"
+        >
+          <img
+            src="./imgs/background2.webp"
+            loading="lazy"
+            alt="Boat Adventure Background"
+            class="pointer-events-none absolute left-0 top-0 -z-10 aspect-auto h-full w-auto select-none xl:h-auto xl:w-full"
+          />
+          <div
+            class="pointer-events-none absolute left-0 top-0 z-0 h-full w-full select-none bg-[#135095] opacity-85"
+          ></div>
+        </div>
+        <article
+          class="flex flex-col items-center justify-center gap-8 p-10 text-center text-white sm:items-start sm:pl-36 sm:text-start xl:py-0 xl:pr-0"
+        >
+          <h3
+            class="white-horizontal-line relative mb-8 text-sm font-extralight"
+          >
+            Tägliche Bootsausflüge
+          </h3>
+          <h2 class="z-20 font-urbanist text-xl font-semibold">
+            Tauche ein in dein Abenteuer!
+          </h2>
+          <p class="z-20 text-sm font-extralight">
+            Erlebe mit RedSeaHorse unvergessliche Bootsausflüge zu den <br />
+            faszinierendsten Tauchplätzen des Roten Meeres. Egal ob Anfänger
+            oder erfahrener Taucher – unser professionelles Team sorgt für
+            Sicherheit, Komfort und außergewöhnliche Momente unter Wasser.
+            Genieße einen perfekten Tag mit zwei Tauchgängen, leckerem Essen an
+            Bord und der atemberaubenden Unterwasserwelt direkt vor deinen
+            Augen.
+          </p>
+          <button
+            aria-label="See Our Offers"
+            class="z-10 h-12 w-44 rounded-l-full rounded-r-full border-2 border-white text-center hover:bg-white hover:text-blue-900"
+          >
+            Unser Angebot
+          </button>
+        </article>
+        <img
+          src="/imgs/boat_2.webp"
+          loading="lazy"
+          alt="Boat Image"
+          class="box-content hidden h-full rounded-bl-full border-b-[12px] border-l-[12px] border-white xl:block"
+        />
+      </section>
+
+      <!-- Our Services Section -->
+      <section
+        aria-label="Our Services"
+        class="relative z-30 h-auto w-full border-[1px] border-black bg-[#effbff] shadow-lg md:h-screen xl:h-[70vh] 2xl:rounded-b-[500px]"
+      >
+        <ul
+          aria-label="List of services offered"
+          class="flex h-full w-full flex-col items-center justify-center gap-6 py-10 md:flex-row lg:gap-12 lg:py-0"
+        >
+          <li aria-label="Daily Dives Service" class="services-section-list-item">
+            <img
+              src="./imgs/diver icon.svg"
+              alt="Diver Icon"
+              class="size-10 lg:size-[5.5rem]"
+            />
+            <h3 class="services-section-header">Tägliche Tauchgänge</h3>
+            <p class="services-section-paragraph">
+              Erkunde die faszinierendsten Tauchplätze des Roten Meeres und
+              erlebe täglich ein neues Abenteuer!
+            </p>
+            <button
+              aria-label="Learn more about daily dive trips"
+              class="services-section-btn"
+            >
+              Tauchausflüge
+            </button>
+          </li>
+          <li aria-label="Learn Diving Service" class="services-section-list-item">
+            <img
+              src="./imgs/book icon.svg"
+              alt="Dive Courses Icon"
+              class="size-10 lg:size-[5.5rem]"
+            />
+            <h3 class="services-section-header">Tauchen lernen</h3>
+            <p class="services-section-paragraph">
+              Vom Anfänger bis zum Profi - entdecke das Tauchen mit unseren
+              professionellen Kursen!
+            </p>
+            <button
+              aria-label="Learn more about our diving courses"
+              class="services-section-btn"
+            >
+              Tauchkurse
+            </button>
+          </li>
+          <li
+            aria-label="Onboard Comfort Service"
+            class="services-section-list-item"
+          >
+            <img
+              src="./imgs/boat icon.svg"
+              alt="Boat Icon"
+              class="size-10 lg:size-[5.5rem]"
+            />
+            <h3 class="services-section-header">Bord-Komfort</h3>
+            <p class="services-section-paragraph">
+              Entspanne auf unserem voll ausgestatteten Boot mit bestem Service
+              und köstlicher Verpflegung.
+            </p>
+            <button
+              aria-label="Discover more about onboard comfort"
+              class="services-section-btn"
+            >
+              Unser Boot
+            </button>
+          </li>
+          <li aria-label="Egypt Tours Service" class="services-section-list-item">
+            <img
+              src="./imgs/pyramid icon.svg"
+              alt="Pyramids Icon"
+              class="size-10 lg:size-[5.5rem]"
+            />
+            <h3 class="services-section-header">Reisen in Ägypten</h3>
+            <p class="services-section-paragraph">
+              Kombiniere deine Taucherlebnisse mit unvergesslichen Ausflügen zu
+              Ägyptens kulturellen Highlights.
+            </p>
+            <button
+              aria-label="Explore our Egypt tours and excursions"
+              class="services-section-btn z-40"
+            >
+              Über Ägypten
+            </button>
+          </li>
+        </ul>
+        <img
+          src="./imgs/waves_background_icon.svg"
+          loading="lazy"
+          alt="Wave Icon"
+          class="absolute left-0 top-0 z-20 hidden size-52 -translate-y-2/4 xl:inline"
+        />
+        <img
+          src="./imgs/bubbles_background_icon.svg"
+          loading="lazy"
+          alt="Bubbles Icon"
+          class="absolute -bottom-5 -right-12 z-30 hidden size-[65vh] translate-y-1/3 xl:inline"
+        />
+      </section>
+
+      <!-- Our Team Section -->
+      <section
+        aria-label="Our Team"
+        class="z-0 flex h-auto min-h-[85vh] w-full sm:h-[85vh] xl:justify-between"
+      >
+        <article
+          class="flex w-full flex-col items-center justify-center gap-10 p-10 text-center sm:items-start sm:pl-36 sm:text-start xl:ml-16 xl:w-5/12 xl:items-start xl:py-0 xl:pr-0"
+        >
+          <h3 class="black-horizontal-line relative text-sm font-light">
+            Unser Team
+          </h3>
+          <h2 class="font-urbanist text-2xl font-semibold text-blue-800">
+            Tauchen mit
+            <span class="text-red-700"> Herz und Leidenschaft </span>
+          </h2>
+          <p class="text-base font-light xl:text-wrap">
+            RedSeaHorse - das weiblich geführte Tauchboot - steht für
+            unvergessliche Taucherlebnisse, kombiniert mit Sicherheit, Komfort
+            und einer herzlichen Atmosphäre. Unser deutschsprachiges Team
+            begleitet dich vom ersten Schritt an Bord bis zu deinen Tauchgängen
+            – mit exzellentem Service und persönlichem Engagement. Erlebe das
+            Rote Meer auf nachhaltige und unvergessliche Weise.
+          </p>
+          <button
+            aria-label="About Us"
+            class="h-12 w-36 rounded-l-full rounded-r-full border-2 border-blue-900 bg-white text-lg font-medium text-blue-900 hover:bg-blue-900 hover:text-white"
+          >
+            Über Uns
+          </button>
+        </article>
+        <div class="relative z-0 hidden h-[60%] w-auto self-center xl:block">
+          <img
+            src="./imgs/team.webp"
+            loading="lazy"
+            alt="Team at Red Sea Horse Diving Center"
+            class="-z-40 h-full w-auto rounded-tl-[100px]"
+          />
+          <img
+            src="./imgs/boat_3.webp"
+            loading="lazy"
+            alt="Boat Image"
+            class="absolute -bottom-1/4 -left-[15%] z-10 size-64"
+          />
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer
+      class="relative z-0 flex h-auto w-full flex-col xl:h-[35vh] xl:overflow-hidden xl:bg-skyblue"
+    >
+      <div
+        class="box-content flex h-auto w-full flex-col items-center justify-center gap-5 border-white bg-[#174790] lg:gap-2 xl:absolute xl:-left-2 xl:-top-5 xl:h-[45vh] xl:rounded-br-full xl:rounded-tl-full xl:border-[15px]"
+      >
+        <div
+          class="flex h-auto flex-col items-center justify-center gap-4 px-10 pt-10 lg:flex-row lg:gap-0 xl:h-[40%]"
+        >
+          <section
+            aria-label="Weather Info"
+            class="flex h-full flex-col items-center gap-1 lg:items-start lg:gap-5"
+          >
+            <h2 class="font-light text-white">
+              <span class="font-medium text-skyblue">Hurghada </span> Wetter
+            </h2>
+            <div
+              class="flex h-full flex-col items-center gap-3 sm:flex-row sm:gap-16"
+            >
+              <article class="weather-icon relative text-center lg:text-left">
+                <h3 class="font-light text-white">23°C</h3>
+                <p class="text-[0.6rem] font-extralight text-white">sonnig</p>
+              </article>
+              <article
+                class="water-temp-icon relative text-center lg:text-left"
+              >
+                <h3 class="font-light text-white">20°C</h3>
+                <p class="text-[0.6rem] font-extralight text-white">
+                  Wassertemp.
+                </p>
+              </article>
+              <article class="wet-suit-icon relative text-center lg:text-left">
+                <h3 class="font-light text-white">7mm</h3>
+                <p class="text-[0.6rem] font-extralight text-white">
+                  langer Wetsuit
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <nav
+            aria-label="Quick Links"
+            class="flex h-full flex-col items-center gap-1 px-10 lg:items-start lg:gap-5"
+          >
+            <h2 class="px-10 font-light text-white">
+              <span class="font-medium text-skyblue">Quick</span> Links
+            </h2>
+            <ul
+              class="flex h-full flex-col items-center gap-3 border-white px-10 sm:flex-row sm:gap-5 lg:border-x-[1px]"
+            >
+              <li>
+                <a href="#" class="text-xs text-white hover:underline"
+                  >Buchung</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-xs text-white hover:underline"
+                  >Kontakt</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-xs text-white hover:underline"
+                  >Gallerie</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-xs text-white hover:underline">Blog</a>
+              </li>
+            </ul>
+          </nav>
+
+          <nav
+            aria-label="Social Media Links"
+            class="flex h-full flex-col items-center gap-2 px-10 lg:items-start"
+          >
+            <h2 class="font-light text-white">
+              <span class="font-medium text-skyblue">Folge</span> Uns
+            </h2>
+            <ul class="flex h-full items-center gap-2 sm:gap-8">
+              <li>
+                <a href="#"
+                  ><img
+                    src="./imgs/facebook.svg"
+                    loading="lazy"
+                    alt="Facebook"
+                    class="size-[30px] sm:size-7"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="./imgs/tiktok.svg"
+                    loading="lazy"
+                    alt="Tiktok"
+                    class="size-[30px] sm:size-7"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="./imgs/youtube.svg"
+                    loading="lazy"
+                    alt="Youtube"
+                    class="size-[30px] sm:size-7"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="./imgs/whatsapp.svg"
+                    loading="lazy"
+                    alt="Whatsapp"
+                    class="size-[30px] sm:size-7"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="./imgs/instagram.svg"
+                    loading="lazy"
+                    alt="Instagram"
+                    class="size-[30px] sm:size-7"
+                /></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div
+          class="flex h-1/3 w-full flex-col-reverse items-center justify-around gap-4 text-sm text-white lg:flex-row lg:gap-0"
+        >
+          <small class="text-[0.6rem]">
+            © 2024 All Copyrights Reserved Red Sea Horse <br />
+            Powered by Innovix Solutions
+          </small>
+          <nav>
+            <ul class="flex flex-col gap-3 lg:flex-row lg:gap-16">
+              <li>
+                <a href="#" class="text-xs hover:underline sm:text-base"
+                  >Bedingungen & Konditionen</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-xs hover:underline sm:text-base"
+                  >Impressum</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-xs hover:underline sm:text-base"
+                  >Datenschutzerklärung</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
