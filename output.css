@@ -807,6 +807,14 @@ video {
   height: 100vh;
 }
 
+.max-h-\[350px\] {
+  max-height: 350px;
+}
+
+.max-h-\[400px\] {
+  max-height: 400px;
+}
+
 .min-h-\[85vh\] {
   min-height: 85vh;
 }
@@ -1701,6 +1709,14 @@ html {
 
   .xl\:h-\[70vh\] {
     height: 70vh;
+  }
+
+  .xl\:max-h-\[350px\] {
+    max-height: 350px;
+  }
+
+  .xl\:max-h-\[400px\] {
+    max-height: 400px;
   }
 
   .xl\:w-5\/12 {
