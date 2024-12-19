@@ -26,7 +26,7 @@
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
-    <header class="absolute left-0 top-14 z-10 h-1/6 w-full p-0 lg:top-24">
+    <header class="absolute left-0 top-14 z-[9999] h-1/6 w-full p-0 lg:top-[4.5rem]">
       <nav
         aria-label="Main Navigation"
         class="flex h-1/6 items-center justify-center gap-4 xl:gap-11"
@@ -49,7 +49,7 @@
             <img
               src="./imgs/Logo.svg"
               alt="Red Sea Horse Diving Center Logo"
-              class="size-20 max-w-full lg:size-40"
+              class="size-20 max-w-full lg:size-36"
             />
           </picture>
         </a>
@@ -69,7 +69,7 @@
       <button
         onclick="toggleMenu()"
         aria-label="Toggle Mobile Menu"
-        class="fixed right-10 top-12 z-50 lg:hidden"
+        class="fixed right-10 top-12 z-[99999] lg:hidden"
         id="mobile-menu-toggle"
       >
         <img src="./imgs/menu.svg" alt="Navigation Menu" class="right-1/4 h-8 w-8" />
@@ -78,7 +78,7 @@
         aria-label="Mobile Navigation Menu"
         data-menu-state="closed"
         id="mobile-menu"
-        class="fixed z-40 flex h-screen w-full flex-col items-center justify-around space-y-4 bg-blue-900 py-4 text-center text-white transition-all duration-300 ease-in sm:w-3/4 lg:hidden"
+        class="fixed top-0 z-[9999] flex h-screen w-full flex-col items-center justify-around space-y-4 bg-yaleblue py-4 text-center text-white transition-all duration-300 ease-in sm:w-3/4 lg:hidden"
       >
         <li class="nav-link w-1/3">
           <a href="#" aria-label="About Us">Über uns</a>
@@ -101,14 +101,14 @@
         <li class="nav-link w-1/3"><a href="#" aria-label="Language">DE</a></li>
       </ul>
     </header>
-    <main class="relative z-0 w-full overflow-hidden">
+    <main class="z-0 w-full overflow-hidden">
       <!-- Hero Section -->
       <section
         aria-label="Hero Section"
-        class="m-0 flex h-screen w-auto flex-col items-center justify-center gap-8 p-0"
+        class="relative flex h-screen w-auto flex-col items-center justify-center gap-8"
       >
         <img
-          class="pointer-events-none absolute left-0 top-0 -z-10 aspect-auto h-screen select-none overflow-x-hidden shadow-md shadow-gray-400 lg:w-screen xl:-left-[10rem] xl:-top-[10rem] xl:box-content xl:rounded-b-[700px] xl:border-[10rem] xl:border-cyan-50 2xl:max-h-fit"
+          class="xl:border-heroborder xl:-left-heroborder xl:-top-heroborder pointer-events-none absolute left-0 top-0 -z-10 aspect-auto h-screen select-none overflow-x-hidden shadow-md shadow-gray-400 lg:w-screen xl:box-content xl:rounded-b-[700px] xl:border-[#effbff] 2xl:max-h-fit"
           src="./imgs/Hero_mob_320x642.webp"
           alt="background video"
           srcset="
@@ -121,14 +121,14 @@
           sizes="(max-width: 320px) 320px,(max-width: 480px) 480px, (max-width: 600px) 600px, (max-width: 1024px) 1024px, 2000px"
         />
         <h1
-          class="w-auto text-center font-urbanist text-2xl font-extralight text-white sm:text-[2.50rem]"
+          class="mt-heroborder w-auto text-center font-urbanist text-2xl font-extralight text-white sm:text-[2.50rem]"
           style="font-display: swap"
         >
           Wähle Dein Abenteuer
         </h1>
         <button
           aria-label="Start Adventure"
-          class="z-20 h-7 w-32 rounded-l-full rounded-r-full border-2 border-white text-center text-sm font-normal text-white hover:bg-white hover:text-blue-900 sm:h-10 sm:w-44 sm:text-base"
+          class="z-20 h-7 w-32 rounded-l-full rounded-r-full border-2 border-white text-center text-sm font-normal text-white hover:bg-white hover:text-yaleblue sm:h-10 sm:w-44 sm:text-base"
         >
           STARTE JETZT
         </button>
@@ -137,51 +137,53 @@
       <!-- About the Red Sea Section -->
       <section
         aria-label="About the Red Sea"
-        class="relative mb-20 flex h-auto w-full justify-center gap-4 pb-10 pt-20 md:h-screen lg:gap-16 xl:mb-0"
+        class="relative flex h-auto w-full justify-center gap-4 pt-[calc(var(--hero-border-width)/2)] sm:h-screen lg:gap-16"
       >
-        <figure class="relative z-10 hidden size-4/6 w-auto lg:inline">
+        <figure class="relative z-10 hidden size-[26rem] lg:inline">
           <img
             src="./imgs/sunset_background_icon.svg"
             loading="lazy"
             alt="sunset icon"
-            class="absolute left-[15%] top-0 size-32 -translate-y-2/4"
+            class="absolute -top-1 left-[15%] z-10 size-32 -translate-y-2/4"
           />
           <img
             src="./imgs/Ellipse 2.webp"
             loading="lazy"
             alt="Sea View Image"
-            class="size-full rounded-full border-[1px] border-black"
+            class="absolute -top-4 left-0 size-[26rem] rounded-full border-[1.5px] border-black shadow-lg"
           />
           <img
             src="./imgs/Ellipse 3.webp"
             loading="lazy"
             alt="Deep Sea View"
-            class="absolute -bottom-1/3 right-4 size-3/6"
+            class="absolute -bottom-[30%] right-5 size-56"
           />
           <div
-            class="absolute -bottom-[40%] right-[40%] -z-10 size-[30%] rounded-full bg-[#174790]"
+            class="absolute -bottom-[31%] right-[48.5%] -z-10 size-[25%] rounded-full bg-yaleblue"
           ></div>
         </figure>
-        <article class="z-10 flex h-full w-8/12 flex-col gap-2 lg:w-5/12 lg:gap-8">
-          <h2 class="font-urbanist text-base font-semibold text-blue-900 sm:text-xl 2xl:text-2xl">
+        <article
+          class="z-10 mb-10 flex h-full flex-col gap-2 text-center sm:mb-0 sm:text-start lg:w-5/12 lg:gap-5"
+        >
+          <h2 class="font-urbanist text-base font-semibold text-yaleblue sm:text-xl 2xl:text-2xl">
             Das Paradies für Taucher: <br />
             Willkommen im <span class="text-red-700">Roten Meer</span>
           </h2>
-          <p class="text-sm font-light sm:text-base 2xl:text-base">
+          <p class="font-poppins text-[0.9rem] font-light leading-6">
             Tauche ein in eine Welt voller faszinierender Unterwasserabenteuer, während wir dich
             herzlich dazu einladen, die unvergleichliche Schönheit und Vielfalt des Roten Meeres zu
             entdecken. RedSeaHorse bietet die Möglichkeit, die atemberaubenden Korallenriffe,
             faszinierenden Meereslebewesen und geheimnisvollen Wracks dieser einzigartigen Region zu
             erkunden.
           </p>
-          <p class="text-sm font-light sm:text-sm 2xl:text-base">
+          <p class="text-[0.9rem] font-light leading-6">
             Unsere erfahrenen Tauchlehrer stehen dir zur Seite, um dir ein sicheres und
             unvergessliches Taucherlebnis zu garantieren, egal ob du ein erfahrener Taucher bist
             oder zum ersten Mal die Unterwasserwelt entdecken möchtest. Wir bieten eine Vielzahl von
             Kursen und Ausflügen für alle Erfahrungsstufen an, so dass jeder die Möglichkeit hat,
             das Abenteuer seines Lebens zu erleben.
           </p>
-          <p class="text-sm font-light sm:text-sm 2xl:text-base">
+          <p class="text-[0.9rem] font-light leading-6">
             Entdecke mit uns die lebendigen Farben der Korallenriffe, die faszinierende Vielfalt der
             Meeresbewohner und die ruhige Schwerelosigkeit des Tauchens. Tauche ein und lasse dich
             von der Magie des Roten Meeres verzaubern.  Ägypten ist eine der besten Destinationen
@@ -194,29 +196,16 @@
       <!-- Boat Adventure Section -->
       <section
         aria-label="Boat Adventure"
-        class="relative flex h-auto min-h-[80vh] w-full items-center justify-center overflow-hidden sm:h-[80vh] xl:justify-between"
+        class="boat-adventure-section-bg relative flex h-auto min-h-[85vh] w-full items-center justify-center overflow-hidden sm:h-[80vh] xl:justify-between"
       >
-        <div
-          class="pointer-events-none absolute left-0 top-0 -z-10 h-full w-full select-none overflow-hidden"
-        >
-          <img
-            src="./imgs/background2.webp"
-            loading="lazy"
-            alt="Boat Adventure Background"
-            class="pointer-events-none absolute left-0 top-0 -z-10 aspect-auto h-full w-auto select-none xl:h-auto xl:w-full"
-          />
-          <div
-            class="pointer-events-none absolute left-0 top-0 z-0 h-full w-full select-none bg-[#135095] opacity-85"
-          ></div>
-        </div>
         <article
-          class="flex flex-col items-center justify-center gap-8 p-10 text-center text-white sm:items-start sm:pl-36 sm:text-start xl:py-0 xl:pr-0"
+          class="flex flex-col items-center justify-center gap-6 p-10 text-center text-white sm:items-start sm:pl-52 sm:text-start xl:py-0 xl:pr-0"
         >
-          <h3 class="white-horizontal-line relative mb-8 text-sm font-extralight">
+          <h3 class="white-horizontal-line relative mb-8 text-xs font-extralight uppercase">
             Tägliche Bootsausflüge
           </h3>
-          <h2 class="z-20 font-urbanist text-xl font-semibold">Tauche ein in dein Abenteuer!</h2>
-          <p class="z-20 text-sm font-extralight">
+          <h2 class="z-20 font-urbanist text-xl font-medium">Tauche ein in dein Abenteuer!</h2>
+          <p class="z-20 text-sm font-extralight leading-6">
             Erlebe mit RedSeaHorse unvergessliche Bootsausflüge zu den <br />
             faszinierendsten Tauchplätzen des Roten Meeres. Egal ob Anfänger oder erfahrener Taucher
             – unser professionelles Team sorgt für Sicherheit, Komfort und außergewöhnliche Momente
@@ -225,7 +214,7 @@
           </p>
           <button
             aria-label="See Our Offers"
-            class="z-10 h-12 w-44 rounded-l-full rounded-r-full border-2 border-white text-center hover:bg-white hover:text-blue-900"
+            class="z-10 h-10 w-48 rounded-l-full rounded-r-full border-2 border-white text-center uppercase hover:bg-white hover:text-yaleblue"
           >
             Unser Angebot
           </button>
@@ -234,21 +223,21 @@
           src="/imgs/boat_2.webp"
           loading="lazy"
           alt="Boat Image"
-          class="box-content hidden h-full rounded-bl-full border-b-[12px] border-l-[12px] border-white xl:block"
+          class="mt-3 box-content hidden h-full rounded-bl-full border-b-[16px] border-l-[16px] border-white xl:block"
         />
       </section>
 
       <!-- Our Services Section -->
       <section
         aria-label="Our Services"
-        class="relative z-30 h-auto w-full border-[1px] border-black bg-[#effbff] shadow-lg md:h-screen xl:h-[70vh] 2xl:rounded-b-[500px]"
+        class="relative z-30 h-auto w-full border-[1px] border-black bg-[#effbff] shadow-xl md:h-screen xl:h-[70vh] 2xl:rounded-b-[450px]"
       >
         <ul
           aria-label="List of services offered"
-          class="flex h-full w-full flex-col items-center justify-center gap-6 py-10 md:flex-row lg:gap-12 lg:py-0"
+          class="flex h-full w-full flex-col items-center justify-center gap-6 py-10 md:flex-row lg:gap-4 lg:py-0"
         >
           <li aria-label="Daily Dives Service" class="services-section-list-item">
-            <img src="./imgs/diver icon.svg" alt="Diver Icon" class="size-10 lg:size-[5.5rem]" />
+            <img src="./imgs/diver icon.svg" alt="Diver Icon" class="services-section-img" />
             <h3 class="services-section-header">Tägliche Tauchgänge</h3>
             <p class="services-section-paragraph">
               Erkunde die faszinierendsten Tauchplätze des Roten Meeres und erlebe täglich ein neues
@@ -259,11 +248,7 @@
             </button>
           </li>
           <li aria-label="Learn Diving Service" class="services-section-list-item">
-            <img
-              src="./imgs/book icon.svg"
-              alt="Dive Courses Icon"
-              class="size-10 lg:size-[5.5rem]"
-            />
+            <img src="./imgs/book icon.svg" alt="Dive Courses Icon" class="services-section-img" />
             <h3 class="services-section-header">Tauchen lernen</h3>
             <p class="services-section-paragraph">
               Vom Anfänger bis zum Profi - entdecke das Tauchen mit unseren professionellen Kursen!
@@ -273,7 +258,7 @@
             </button>
           </li>
           <li aria-label="Onboard Comfort Service" class="services-section-list-item">
-            <img src="./imgs/boat icon.svg" alt="Boat Icon" class="size-10 lg:size-[5.5rem]" />
+            <img src="./imgs/boat icon.svg" alt="Boat Icon" class="services-section-img" />
             <h3 class="services-section-header">Bord-Komfort</h3>
             <p class="services-section-paragraph">
               Entspanne auf unserem voll ausgestatteten Boot mit bestem Service und köstlicher
@@ -284,11 +269,7 @@
             </button>
           </li>
           <li aria-label="Egypt Tours Service" class="services-section-list-item">
-            <img
-              src="./imgs/pyramid icon.svg"
-              alt="Pyramids Icon"
-              class="size-10 lg:size-[5.5rem]"
-            />
+            <img src="./imgs/pyramid icon.svg" alt="Pyramids Icon" class="services-section-img" />
             <h3 class="services-section-header">Reisen in Ägypten</h3>
             <p class="services-section-paragraph">
               Kombiniere deine Taucherlebnisse mit unvergesslichen Ausflügen zu Ägyptens kulturellen
@@ -306,7 +287,7 @@
           src="./imgs/waves_background_icon.svg"
           loading="lazy"
           alt="Wave Icon"
-          class="absolute left-0 top-0 z-20 hidden size-52 -translate-y-2/4 xl:inline"
+          class="absolute left-0 top-0 z-20 hidden size-48 -translate-y-2/4 xl:inline"
         />
         <img
           src="./imgs/bubbles_background_icon.svg"
@@ -319,17 +300,19 @@
       <!-- Our Team Section -->
       <section
         aria-label="Our Team"
-        class="z-0 flex h-auto min-h-[85vh] w-full sm:h-[85vh] xl:justify-between"
+        class="z-0 flex h-auto min-h-[85vh] w-full pb-20 sm:h-[90vh] xl:justify-between"
       >
         <article
-          class="flex w-full flex-col items-center justify-center gap-10 p-10 text-center sm:items-start sm:pl-36 sm:text-start xl:ml-16 xl:w-5/12 xl:items-start xl:py-0 xl:pr-0"
+          class="flex w-full flex-col items-center justify-center gap-5 p-10 text-center sm:items-start sm:pl-36 sm:text-start xl:ml-16 xl:w-5/12 xl:items-start xl:py-0 xl:pr-0"
         >
-          <h3 class="black-horizontal-line relative text-sm font-light">Unser Team</h3>
-          <h2 class="font-urbanist text-2xl font-semibold text-blue-800">
+          <h3 class="black-horizontal-line relative mb-7 text-sm font-light uppercase">
+            Unser Team
+          </h3>
+          <h2 class="font-urbanist text-[1.4rem] font-semibold text-yaleblue">
             Tauchen mit
             <span class="text-red-700"> Herz und Leidenschaft </span>
           </h2>
-          <p class="text-base font-light xl:text-wrap">
+          <p class="mb-2 w-11/12 text-sm font-light leading-6 xl:text-wrap">
             RedSeaHorse - das weiblich geführte Tauchboot - steht für unvergessliche
             Taucherlebnisse, kombiniert mit Sicherheit, Komfort und einer herzlichen Atmosphäre.
             Unser deutschsprachiges Team begleitet dich vom ersten Schritt an Bord bis zu deinen
@@ -338,78 +321,117 @@
           </p>
           <button
             aria-label="About Us"
-            class="h-12 w-36 rounded-l-full rounded-r-full border-2 border-blue-900 bg-white text-lg font-medium text-blue-900 hover:bg-blue-900 hover:text-white"
+            class="h-11 w-[8.5rem] rounded-l-full rounded-r-full border-2 border-yaleblue bg-white text-base font-medium uppercase text-yaleblue hover:bg-yaleblue hover:text-white"
           >
             Über Uns
           </button>
         </article>
-        <div class="relative z-0 hidden h-[60%] w-auto self-center xl:block">
+        <div class="relative z-0 hidden h-auto w-[45%] self-center xl:block">
           <img
             src="./imgs/team.webp"
             loading="lazy"
             alt="Team at Red Sea Horse Diving Center"
-            class="-z-40 h-full w-auto rounded-tl-[100px]"
+            class="-z-40 h-auto w-full rounded-tl-[150px]"
           />
           <img
             src="./imgs/boat_3.webp"
             loading="lazy"
             alt="Boat Image"
-            class="absolute -bottom-1/4 -left-[15%] z-10 size-64"
+            class="absolute -bottom-1/4 -left-[17.5%] z-10 size-[17rem]"
           />
         </div>
       </section>
     </main>
     <!-- Footer Section -->
     <footer
-      class="relative z-0 flex h-auto w-full flex-col xl:h-[35vh] xl:overflow-hidden xl:bg-skyblue"
+      class="relative z-0 flex h-auto w-full flex-col xl:h-[37vh] xl:overflow-hidden xl:bg-skyblue"
     >
       <div
-        class="box-content flex h-auto w-full flex-col items-center justify-center gap-5 border-white bg-[#174790] lg:gap-2 xl:absolute xl:-left-2 xl:-top-5 xl:h-[45vh] xl:rounded-br-full xl:rounded-tl-full xl:border-[15px]"
+        class="box-content flex h-auto w-full flex-col items-center justify-center gap-5 border-white bg-yaleblue lg:gap-3 xl:absolute xl:-left-5 xl:-top-3 xl:h-[42vh] xl:rounded-br-full xl:rounded-tl-full xl:border-[15px]"
       >
         <div
-          class="flex h-auto flex-col items-center justify-center gap-4 px-10 pt-10 lg:flex-row lg:gap-0 xl:h-[40%]"
+          class="flex h-auto flex-col items-center justify-center gap-4 pt-8 lg:flex-row lg:gap-16 xl:h-[45%] xl:pl-24"
         >
           <section
             aria-label="Weather Info"
-            class="flex h-full flex-col items-center gap-1 lg:items-start lg:gap-5"
+            class="flex h-full w-full flex-col items-center gap-1 lg:items-start lg:gap-2"
           >
-            <h2 class="font-light text-white">
-              <span class="font-medium text-skyblue">Hurghada </span> Wetter
+            <h2 class="text-base font-extralight text-white">
+              <span class="font-normal text-skyblue">Hurghada </span> Wetter
             </h2>
-            <div class="flex h-full flex-col items-center gap-3 sm:flex-row sm:gap-16">
-              <article class="weather-icon relative text-center lg:text-left">
-                <h3 class="font-light text-white">23°C</h3>
-                <p class="text-[0.6rem] font-extralight text-white">sonnig</p>
+            <div class="flex h-full flex-col items-center gap-3 sm:flex-row sm:gap-14">
+              <article class="flex gap-2 text-center lg:text-left">
+                <img
+                  src="./imgs/weather_icon.svg"
+                  alt="Weather Icon"
+                  loading="lazy"
+                  height="35"
+                  width="35"
+                />
+                <hgroup class="flex flex-col">
+                  <h3 class="font-light text-white">23°C</h3>
+                  <p class="text-nowrap text-[0.6rem] font-thin text-white">sonnig</p>
+                </hgroup>
               </article>
-              <article class="water-temp-icon relative text-center lg:text-left">
-                <h3 class="font-light text-white">20°C</h3>
-                <p class="text-[0.6rem] font-extralight text-white">Wassertemp.</p>
+              <article class="flex gap-2 text-center lg:text-left">
+                <img
+                  src="./imgs/watertemp_icon.svg"
+                  alt="Water Temperature Icon"
+                  loading="lazy"
+                  height="30"
+                  width="30"
+                />
+                <hgroup class="flex flex-col">
+                  <h3 class="font-light text-white">20°C</h3>
+                  <p class="text-nowrap text-[0.6rem] font-thin text-white">Wassertemp.</p>
+                </hgroup>
               </article>
-              <article class="wet-suit-icon relative text-center lg:text-left">
-                <h3 class="font-light text-white">7mm</h3>
-                <p class="text-[0.6rem] font-extralight text-white">langer Wetsuit</p>
+              <article class="flex gap-2 text-center lg:text-left">
+                <img
+                  src="./imgs/wetsuit_icon.svg"
+                  alt="Wetsuit Icon"
+                  loading="lazy"
+                  height="25"
+                  width="25"
+                />
+                <hgroup class="flex flex-col">
+                  <h3 class="font-light text-white">7mm</h3>
+                  <p class="text-nowrap text-[0.6rem] font-thin text-white">langer Wetsuit</p>
+                </hgroup>
               </article>
             </div>
           </section>
 
           <nav
             aria-label="Quick Links"
-            class="flex h-full flex-col items-center gap-1 px-10 lg:items-start lg:gap-5"
+            class="flex h-full w-full flex-col items-center gap-1 lg:items-start lg:gap-4"
           >
-            <h2 class="px-10 font-light text-white">
-              <span class="font-medium text-skyblue">Quick</span> Links
+            <h2 class="px-16 font-extralight text-white">
+              <span class="font-normal text-skyblue">Quick</span> Links
             </h2>
             <ul
-              class="flex h-full flex-col items-center gap-3 border-white px-10 sm:flex-row sm:gap-5 lg:border-x-[1px]"
+              class="flex h-auto flex-col items-center gap-3 border-white px-16 sm:h-14 sm:flex-row sm:gap-4 lg:border-x-[1px]"
             >
               <li>
-                <a href="#" class="text-xs text-white hover:underline">Buchung</a>
+                <a
+                  href="#"
+                  class="border-white pr-3 text-xs text-white hover:underline lg:border-r-2"
+                  >Buchung</a
+                >
               </li>
               <li>
-                <a href="#" class="text-xs text-white hover:underline">Kontakt</a>
+                <a
+                  href="#"
+                  class="border-white pr-3 text-xs text-white hover:underline lg:border-r-2"
+                  >Kontakt</a
+                >
               </li>
               <li>
-                <a href="#" class="text-xs text-white hover:underline">Gallerie</a>
+                <a
+                  href="#"
+                  class="border-white pr-3 text-xs text-white hover:underline lg:border-r-2"
+                  >Gallerie</a
+                >
               </li>
               <li>
                 <a href="#" class="text-xs text-white hover:underline">Blog</a>
@@ -419,19 +441,19 @@
 
           <nav
             aria-label="Social Media Links"
-            class="flex h-full flex-col items-center gap-2 px-10 lg:items-start"
+            class="flex h-full w-full flex-col items-center gap-2 lg:items-start"
           >
-            <h2 class="font-light text-white">
-              <span class="font-medium text-skyblue">Folge</span> Uns
+            <h2 class="font-extralight text-white">
+              <span class="font-normal text-skyblue">Folge</span> Uns
             </h2>
-            <ul class="flex h-full items-center gap-2 sm:gap-8">
+            <ul class="flex h-full items-center gap-2 sm:gap-6">
               <li>
                 <a href="#"
                   ><img
                     src="./imgs/facebook.svg"
                     loading="lazy"
                     alt="Facebook"
-                    class="size-[30px] sm:size-7"
+                    class="size-[30px] lg:size-8"
                 /></a>
               </li>
               <li>
@@ -440,7 +462,7 @@
                     src="./imgs/tiktok.svg"
                     loading="lazy"
                     alt="Tiktok"
-                    class="size-[30px] sm:size-7"
+                    class="size-[30px] lg:size-7"
                 /></a>
               </li>
               <li>
@@ -449,7 +471,7 @@
                     src="./imgs/youtube.svg"
                     loading="lazy"
                     alt="Youtube"
-                    class="size-[30px] sm:size-7"
+                    class="size-[30px] lg:size-9"
                 /></a>
               </li>
               <li>
@@ -458,7 +480,7 @@
                     src="./imgs/whatsapp.svg"
                     loading="lazy"
                     alt="Whatsapp"
-                    class="size-[30px] sm:size-7"
+                    class="size-[30px] lg:size-8"
                 /></a>
               </li>
               <li>
@@ -467,7 +489,7 @@
                     src="./imgs/instagram.svg"
                     loading="lazy"
                     alt="Instagram"
-                    class="size-[30px] sm:size-7"
+                    class="size-[30px] lg:size-8"
                 /></a>
               </li>
             </ul>
@@ -475,24 +497,24 @@
         </div>
 
         <div
-          class="flex h-1/3 w-full flex-col-reverse items-center justify-around gap-4 text-sm text-white lg:flex-row lg:gap-0"
+          class="flex h-1/3 w-full flex-col-reverse items-center justify-around gap-4 text-sm text-white lg:flex-row lg:gap-0 lg:pl-6"
         >
-          <small class="text-[0.6rem]">
+          <small class="text-[0.6rem] font-light leading-4">
             © 2024 All Copyrights Reserved Red Sea Horse <br />
-            Powered by Innovix Solutions
+            Powered by <span class="underline decoration-[0.1px]">Innovix Solutions</span>
           </small>
-          <nav>
+          <nav class="w-auto">
             <ul class="flex flex-col gap-3 lg:flex-row lg:gap-16">
               <li>
-                <a href="#" class="text-xs hover:underline sm:text-base"
+                <a href="#" class="text-xs tracking-wider hover:underline"
                   >Bedingungen & Konditionen</a
                 >
               </li>
               <li>
-                <a href="#" class="text-xs hover:underline sm:text-base">Impressum</a>
+                <a href="#" class="text-xs tracking-wider hover:underline">Impressum</a>
               </li>
               <li>
-                <a href="#" class="text-xs hover:underline sm:text-base">Datenschutzerklärung</a>
+                <a href="#" class="text-xs tracking-wider hover:underline">Datenschutzerklärung</a>
               </li>
             </ul>
           </nav>
