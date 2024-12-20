@@ -25,7 +25,7 @@
     </noscript>
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="max-w-[2550px]">
     <header class="absolute left-0 top-14 z-[9999] h-1/6 w-full p-0 lg:top-[4.5rem]">
       <nav
         aria-label="Main Navigation"
@@ -108,7 +108,7 @@
         class="relative flex h-screen w-auto flex-col items-center justify-center gap-8"
       >
         <img
-          class="xl:border-heroborder xl:-left-heroborder xl:-top-heroborder pointer-events-none absolute left-0 top-0 -z-10 aspect-auto h-screen select-none overflow-x-hidden shadow-md shadow-gray-400 lg:w-screen xl:box-content xl:rounded-b-[700px] xl:border-[#effbff] 2xl:max-h-fit"
+          class="pointer-events-none absolute left-0 top-0 -z-10 aspect-auto h-screen select-none overflow-x-hidden shadow-md shadow-gray-400 lg:w-screen xl:-left-heroborder xl:-top-heroborder xl:box-content xl:rounded-b-[700px] xl:border-heroborder xl:border-[#effbff] 2xl:max-h-fit"
           src="./imgs/Hero_mob_320x642.webp"
           alt="background video"
           srcset="
@@ -137,7 +137,7 @@
       <!-- About the Red Sea Section -->
       <section
         aria-label="About the Red Sea"
-        class="relative flex h-auto w-full justify-center gap-4 pt-[calc(var(--hero-border-width)/2)] sm:h-screen lg:gap-16"
+        class="relative flex h-auto w-full justify-center gap-4 pt-[calc(var(--hero-border-width)/2)] lg:gap-16 xl:h-screen xl:max-h-[720px]"
       >
         <figure class="relative z-10 hidden size-[26rem] lg:inline">
           <img
@@ -163,7 +163,7 @@
           ></div>
         </figure>
         <article
-          class="z-10 mb-10 flex h-full flex-col gap-2 text-center sm:mb-0 sm:text-start lg:w-5/12 lg:gap-5"
+          class="z-10 mb-10 flex h-full flex-col gap-2 px-10 text-center sm:text-start lg:w-5/12 lg:gap-5 xl:mb-0 xl:px-0"
         >
           <h2 class="font-urbanist text-base font-semibold text-yaleblue sm:text-xl 2xl:text-2xl">
             Das Paradies für Taucher: <br />
@@ -196,7 +196,7 @@
       <!-- Boat Adventure Section -->
       <section
         aria-label="Boat Adventure"
-        class="boat-adventure-section-bg relative flex h-auto min-h-[85vh] w-full items-center justify-center overflow-hidden sm:h-[80vh] xl:justify-between"
+        class="boat-adventure-section-bg relative flex h-auto w-full items-center justify-center overflow-hidden sm:h-[80vh] lg:max-h-[720px] xl:justify-between"
       >
         <article
           class="flex flex-col items-center justify-center gap-6 p-10 text-center text-white sm:items-start sm:pl-52 sm:text-start xl:py-0 xl:pr-0"
@@ -230,7 +230,7 @@
       <!-- Our Services Section -->
       <section
         aria-label="Our Services"
-        class="relative z-30 h-auto w-full border-[1px] border-black bg-[#effbff] shadow-xl md:h-screen xl:h-[70vh] 2xl:rounded-b-[450px]"
+        class="relative z-30 h-auto w-full border-[1px] border-black bg-[#effbff] shadow-xl md:h-screen lg:max-h-[720px] xl:h-[70vh] 2xl:rounded-b-[450px]"
       >
         <ul
           aria-label="List of services offered"
@@ -293,14 +293,14 @@
           src="./imgs/bubbles_background_icon.svg"
           loading="lazy"
           alt="Bubbles Icon"
-          class="absolute -bottom-5 -right-12 z-30 hidden size-[65vh] translate-y-1/3 xl:inline"
+          class="absolute -bottom-5 -right-12 z-30 hidden size-[65vh] max-h-[550px] max-w-[550px] translate-y-1/3 xl:inline"
         />
       </section>
 
       <!-- Our Team Section -->
       <section
         aria-label="Our Team"
-        class="z-0 flex h-auto min-h-[85vh] w-full pb-20 sm:h-[90vh] xl:justify-between"
+        class="z-0 flex h-auto w-full pb-20 sm:h-[90vh] lg:max-h-[800px] xl:justify-between"
       >
         <article
           class="flex w-full flex-col items-center justify-center gap-5 p-10 text-center sm:items-start sm:pl-36 sm:text-start xl:ml-16 xl:w-5/12 xl:items-start xl:py-0 xl:pr-0"
@@ -326,7 +326,7 @@
             Über Uns
           </button>
         </article>
-        <div class="relative z-0 hidden h-auto w-[45%] self-center xl:block">
+        <div class="relative z-0 hidden h-auto w-[45%] max-w-[720px] self-center xl:block">
           <img
             src="./imgs/team.webp"
             loading="lazy"
